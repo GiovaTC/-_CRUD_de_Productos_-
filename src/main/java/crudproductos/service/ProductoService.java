@@ -1,6 +1,6 @@
-package service;
+package crudproductos.service;
 
-import model.Producto;
+import crudproductos.model.Producto;
 import java.util.List;
 
 public interface ProductoService {

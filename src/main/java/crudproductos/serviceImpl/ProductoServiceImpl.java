@@ -1,8 +1,8 @@
-package serviceImpl;
+package crudproductos.serviceImpl;
 
-import model.Producto;
-import repository.ProductoRepository;
-import service.ProductoService;
+import crudproductos.model.Producto;
+import crudproductos.repository.ProductoRepository;
+import crudproductos.service.ProductoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

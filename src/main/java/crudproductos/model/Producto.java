@@ -1,4 +1,4 @@
-package model;
+package crudproductos.model;
 
 import jakarta.persistence.*;
 

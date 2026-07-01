@@ -45,7 +45,7 @@ CRUDProductos
         ├── serviceImpl
         │      ProductoServiceImpl.java
         │
-        └── CrudProductosApplication.java
+        └── crudproductos.CrudProductosApplication.java
         │
         └── resources
             ├── templates
@@ -196,10 +196,10 @@ public class Producto {
 ```java
 package repository;
 
-import model.Producto;
+import crudproductos.model.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductoRepository extends JpaRepository<Producto,Integer> {
+public interface ProductoRepository extends JpaRepository<Producto, Integer> {
 
 }
 ```
@@ -211,7 +211,7 @@ public interface ProductoRepository extends JpaRepository<Producto,Integer> {
 ```java
 package service;
 
-import model.Producto;
+import crudproductos.model.Producto;
 
 import java.util.List;
 
@@ -235,9 +235,9 @@ public interface ProductoService {
 ```java
 package serviceImpl;
 
-import model.Producto;
-import repository.ProductoRepository;
-import service.ProductoService;
+import crudproductos.model.Producto;
+import crudproductos.repository.ProductoRepository;
+import crudproductos.service.ProductoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -280,12 +280,12 @@ public class ProductoServiceImpl implements ProductoService {
 ```java
 package controller;
 
-import model.Producto;
+import crudproductos.model.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import service.ProductoService;
+import crudproductos.service.ProductoService;
 
 @Controller
 public class ProductoController {
@@ -294,23 +294,23 @@ public class ProductoController {
     ProductoService service;
 
     @GetMapping("/")
-    public String inicio(Model model){
+    public String inicio(Model model) {
 
-        model.addAttribute("lista",service.listar());
+        model.addAttribute("lista", service.listar());
 
         return "index";
     }
 
     @GetMapping("/nuevo")
-    public String nuevo(Model model){
+    public String nuevo(Model model) {
 
-        model.addAttribute("producto",new Producto());
+        model.addAttribute("producto", new Producto());
 
         return "nuevo";
     }
 
     @PostMapping("/guardar")
-    public String guardar(Producto producto){
+    public String guardar(Producto producto) {
 
         service.guardar(producto);
 
@@ -318,15 +318,15 @@ public class ProductoController {
     }
 
     @GetMapping("/editar/{id}")
-    public String editar(@PathVariable Integer id,Model model){
+    public String editar(@PathVariable Integer id, Model model) {
 
-        model.addAttribute("producto",service.buscar(id));
+        model.addAttribute("producto", service.buscar(id));
 
         return "editar";
     }
 
     @GetMapping("/eliminar/{id}")
-    public String eliminar(@PathVariable Integer id){
+    public String eliminar(@PathVariable Integer id) {
 
         service.eliminar(id);
 
@@ -338,18 +338,18 @@ public class ProductoController {
 
 ---
 
-# CrudProductosApplication.java
+# crudproductos.CrudProductosApplication.java
 
 ```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrudProductosApplication {
+public class crudproductos.CrudProductosApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(CrudProductosApplication.class,args);
+        SpringApplication.run(crudproductos.CrudProductosApplication.class,args);
 
     }
 
