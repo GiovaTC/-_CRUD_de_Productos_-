@@ -15,7 +15,7 @@ public class ProductoController {
 
     @GetMapping("/")
     public String inicio(Model model) {
-        model.addAttribute("LISTA", service.listar());
+        model.addAttribute("lista", service.listar());
 
         return "index";
     }
