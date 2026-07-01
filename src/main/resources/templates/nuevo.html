@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo</title>
+</head>
+<body>
+<h2>Nuevo Producto</h2>
+<form action="/guardar" method="post" th:object="${producto}">
+    Nombre
+    <input type="text" th:field="*{nombre}">
+    <br><br>
+    <button type="submit">
+        Guardar
+    </button>
+</form>
+</body>
+</html>
