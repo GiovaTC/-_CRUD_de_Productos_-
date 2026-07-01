@@ -33,5 +33,5 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     public void eliminar(Integer id) {
         repository.deleteById(id);
-    }   
+    }
 }
