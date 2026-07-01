@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar</title>
+</head>
+<body>
+<h2>Editar Producto</h2>
+<form action="/guardar" method="post" th:object="${producto}">
+    <input type="hidden" th:field="*{id}">
+    Nombre
+    <input type="text" th:field="*{nombre}">
+    <br><br>
+    <button type="submit">
+        Actualizar
+    </button>
+</form>
+</body>
+</html>
+    
