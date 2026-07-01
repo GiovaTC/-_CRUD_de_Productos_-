@@ -3,6 +3,10 @@
 
 <img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/0cb1e14d-dcba-4759-8c0f-03857d4e3f5e" />  
 
+<img width="2556" height="1032" alt="image" src="https://github.com/user-attachments/assets/abad68f3-9bea-4e8b-a22a-8f233b728452" />    
+
+<img width="2552" height="1031" alt="image" src="https://github.com/user-attachments/assets/623cd2d6-bcc8-4360-8c8d-13c71f9a02ce" />        
+
 ```
 
 CRUD de productos **lo más básico posible** utilizando:
